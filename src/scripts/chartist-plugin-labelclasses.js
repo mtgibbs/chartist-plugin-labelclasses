@@ -38,13 +38,14 @@
           if (data.type === 'label') {
 
             if (data.axis) {
+              var childElement = data.element.querySelector('span');
               if (data.axis.counterUnits.pos === 'x') {
-                applyClassToLabel(options.axisXLabelClasses, data);
+                applyClassToLabel(options.axisXLabelClasses, data.index, childElement);
               } else if (data.axis.counterUnits.pos === 'y') {
-                applyClassToLabel(options.axisYLabelClasses, data);
+                applyClassToLabel(options.axisYLabelClasses, data.index, childElement);
               }
             } else {
-              applyClassToLabel(options.pieLabelClasses, data);
+              applyClassToLabel(options.pieLabelClasses, data.index, data.element);
             }
           }
         });
@@ -56,9 +57,12 @@
   return Chartist.plugins.ctLabelClasses;
 }));
 
-function applyClassToLabel(classesArray, data) {
-  if (classesArray && data.index <= classesArray.length - 1) {
-    var cssClass = classesArray[data.index];
-    data.element.addClass(cssClass);
+function applyClassToLabel(classesArray, index, element) {
+  if (classesArray && index <= classesArray.length - 1) {
+    var cssClass = classesArray[index];
+
+    if (element) {
+      element.addClass(cssClass);
+    }
   }
 }
