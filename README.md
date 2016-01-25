@@ -1,6 +1,7 @@
 # chartist-plugin-labelclasses
 
 [![Build Status](https://travis-ci.org/mtgibbs/chartist-plugin-labelclasses.svg?branch=master)](https://travis-ci.org/mtgibbs/chartist-plugin-labelclasses)
+[![NPM Version](https://img.shields.io/npm/v/chartist-plugin-labelclasses.svg)](https://www.npmjs.com/package/chartist-plugin-labelclasses)
 
 [Chartist-js](https://github.com/gionkunz/chartist-js) Plugin for adding css classes to Labels
 
