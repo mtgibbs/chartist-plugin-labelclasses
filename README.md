@@ -63,12 +63,12 @@ new Chartist.Bar('#test-bar-chart', {
 });
 ```
 
-##TODO
+## TODO
 
 - Honor the reverseData flag so that classes for the labels are reversed as well.
 - Allow for gaps in classes
 - Allow for ranges of classes
 
-##License
+## License
 
 Licensed under the WTFPL to be in line with Chartist License.
